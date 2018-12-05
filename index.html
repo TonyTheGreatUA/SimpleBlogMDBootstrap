@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Blog Tryrout</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="css/mdb.min.css" rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+      <nav class="navbar fixed-top navbar-expand-lg nav-light white scrolling-navbar">
+          <div class="container">
+            <a href="#" class="navbar-brand waves-effect">
+                  <strong class="black-text">aSuhorada</strong>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse"
+              data-target="#navContent" aria-controls="navContent" aria-expanded="false">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div id="navContent" class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a id="Home" href="#" class="nav-link waves-effect black-text">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="Contacts" href="#" class="nav-link waves-effect black-text">Contacts</a>
+                    </li>
+                </ul>
+
+                
+            <ul class="navbar-nav nav-flex-icons">
+                <li class="nav-item">
+                    <a href="https://twitter.com/AntonSuhorada" class="nav-link waves-effect border border-light rounded black-text">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://www.instagram.com/asuhorada" class="nav-link waves-effect border border-light rounded black-text">
+                        <i class="fa fa-instagram"></i>
+                    </a>
+                </li>
+            </ul>
+            </div>
+
+          </div>
+      </nav>  
+  </header>
+  <main class="mt-5 pt-5">
+      <div class="container">
+          <section class="card wow fadeIn" style="background-image:url(https://images.pexels.com/photos/1228133/pexels-photo-1228133.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)">
+            <div class="card-body text-white text-center py-5 px-5 my-5">
+                <h1 id="Title" class="mb-4">
+                    <strong>aSuhorada Blog</strong>
+                </h1>
+                <p id="Info">This blog is about every creation, that I do.</p>
+                <p id="Info2" class="mb-4">Time you enjoy wasting is not wasted time.</p>
+                <a id="Info3" href="#" class="btn btn-outline-white btn-lg">Read it now</a>
+            </div>
+          </section>
+          <hr class="my-5">
+          <section class="wow fadeIn" style="background-image:url(https://images.pexels.com/photos/1228133/pexels-photo-1228133.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)">
+            <h2 id="Info4" class="h1 text-center my-5 font-weight-bold text-white">
+                Globalization
+            </h2>
+            <div class="card-body text-white text-center">
+                <a id="English" class="btn btn-outline-white btn-lg text-left" onclick="setLang('en')">English</a>
+                <a id="Ukrainian" class="btn btn-outline-white btn-lg text-center" onclick="setLang('ua')">Ukrainian</a>
+                <a id="Russian" class="btn btn-outline-white btn-lg text-right" onclick="setLang('ru')">Russian</a>      
+            </div>
+          </section>
+      </div>
+  </main>
+  
+  <!-- SCRIPTS -->
+  <!-- JQuery -->
+  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <script>
+      var defaultLang = "en";
+      var language = defaultLang;
+
+      setLang(language);
+
+      function setLang(newLang){
+          language = newLang;
+          document.getElementById("Title").innerHTML = localize("title", language);
+          document.getElementById("Home").innerHTML = localize("home", language);
+          document.getElementById("Contacts").innerHTML = localize("contacts", language);
+          document.getElementById("Info").innerHTML = localize("info", language);
+          document.getElementById("Info2").innerHTML = localize("info2", language);
+          document.getElementById("Info3").innerHTML = localize("info3", language);
+          document.getElementById("Info4").innerHTML = localize("info4", language);
+          document.getElementById("English").innerHTML = localize("english", language);
+          document.getElementById("Ukrainian").innerHTML = localize("ukrainian", language);
+          document.getElementById("Russian").innerHTML = localize("russian", language);
+      }
+
+      function localize(txt, language){
+          var lclzdText;
+          switch(language){
+              case "en" :
+                if(txt == "title")
+                    lclzdText = "aSuhorada Blog";
+                if(txt == "home")
+                    lclzdText = "Home";
+                if(txt == "contacts")
+                    lclzdText = "Contacts"
+                if(txt == "info")
+                    lclzdText = "This blog is about every creation, that I do."
+                if(txt == "info2")
+                    lclzdText = "Time you enjoy wasting is not wasted time."
+                if(txt == "info3")
+                    lclzdText = "Read it now"
+                if(txt == "info4")
+                    lclzdText = "Globalization"
+                if(txt == "english")
+                    lclzdText = "English"
+                if(txt == "ukrainian")
+                    lclzdText = "Ukrainian"
+                if(txt == "russian")
+                    lclzdText = "Russian"
+                break;
+              case "ua" :
+                if(txt == "title")
+                    lclzdText = "aSuhorada Блог";
+                if(txt == "home")
+                    lclzdText = "Додому";
+                if(txt == "contacts")
+                    lclzdText = "Контакти"
+                if(txt == "info")
+                    lclzdText = "Цей блог про все, що я створюю."
+                if(txt == "info2")
+                    lclzdText = "Час який ти витрачаеш в насолоду, не витрачений час."
+                if(txt == "info3")
+                    lclzdText = "Прочитати зараз"
+                if(txt == "info4")
+                    lclzdText = "Глобалізація"
+                if(txt == "english")
+                    lclzdText = "Англійська"
+                if(txt == "ukrainian")
+                    lclzdText = "Українська"
+                if(txt == "russian")
+                    lclzdText = "Російська"
+                break;
+              case "ru" :
+                if(txt == "title")
+                    lclzdText = "aSuhorada Блог";
+                if(txt == "home")
+                    lclzdText = "Домой";
+                if(txt == "contacts")
+                    lclzdText = "Контакты"
+                if(txt == "info")
+                    lclzdText = "Этот блог про все, что я создаю."
+                if(txt == "info2")
+                    lclzdText = "Время которое ты тратишь в наслаждение, не потраченное время."
+                if(txt == "info3")
+                    lclzdText = "Читать сейчас"
+                if(txt == "info4")
+                    lclzdText = "Глобализация"
+                if(txt == "english")
+                    lclzdText = "Английский"
+                if(txt == "ukrainian")
+                    lclzdText = "Украинский"
+                if(txt == "russian")
+                    lclzdText = "Русский"
+                break;    
+          }
+          return lclzdText;
+      }
+  </script>
+</body>
+
+</html>
