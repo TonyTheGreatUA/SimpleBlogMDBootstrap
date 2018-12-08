@@ -58,25 +58,73 @@
   </header>
   <main class="mt-5 pt-5">
       <div class="container">
-          <section class="card wow fadeIn" style="background-image:url(https://images.pexels.com/photos/1228133/pexels-photo-1228133.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)">
+          <section class="card wow fadeIn img-fluid view overlay" style="background-image:url(https://images.pexels.com/photos/1020320/pexels-photo-1020320.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)">
             <div class="card-body text-white text-center py-5 px-5 my-5">
-                <h1 id="Title" class="mb-4">
+                <h1 class="mb-4">
                     <strong>aSuhorada Blog</strong>
                 </h1>
-                <p id="Info">This blog is about every creation, that I do.</p>
-                <p id="Info2" class="mb-4">Time you enjoy wasting is not wasted time.</p>
-                <a id="Info3" href="#" class="btn btn-outline-white btn-lg">Read it now</a>
+                <p>This blog is about every creation, that I do.</p>
+                <p class="mb-4">Time you enjoy wasting is not wasted time.</p>
+                <a href="#" class="btn btn-outline-white btn-lg">Read it now</a>
             </div>
           </section>
           <hr class="my-5">
-          <section class="wow fadeIn" style="background-image:url(https://images.pexels.com/photos/1228133/pexels-photo-1228133.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)">
-            <h2 id="Info4" class="h1 text-center my-5 font-weight-bold text-white">
-                Globalization
+          <section class="wow fadeIn">
+            <h2 class="h1 text-center my-5 font-weight-bold">
+                Blog
             </h2>
-            <div class="card-body text-white text-center">
-                <a id="English" class="btn btn-outline-white btn-lg text-left" onclick="setLang('en')">English</a>
-                <a id="Ukrainian" class="btn btn-outline-white btn-lg text-center" onclick="setLang('ua')">Ukrainian</a>
-                <a id="Russian" class="btn btn-outline-white btn-lg text-right" onclick="setLang('ru')">Russian</a>      
+            <div class="row text-left">
+                <div class="col-lg-6 col-md-12">
+                    <div class="view overlay rounded z-depth-1-half mb-3">
+                        <img src="https://images.pexels.com/photos/374870/pexels-photo-374870.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="" class="img-fluid">
+                        <a href="#">
+                            <div class="mask rgba-white-slight"></div>
+                        </a>
+                    </div>
+
+                    <div class="news-data">
+                        <a href="#" class="black-text">
+                            <h6>
+                                <i class="fa fa-child"></i>
+                                <strong>Lifestyle</strong>
+                            </h6>
+                        </a>
+                        <p>
+                            <strong>
+                            <i class="fa fa-clock-0"></i>
+                            08/12/2018
+                            </strong>
+                        </p>
+                    </div>
+
+                    <h3>
+                        <a href="#" class="black-text">
+                            <strong>Lifestyle.</strong>
+                        </a>
+                    </h3>
+                    <p class="black-text">About the things, that I adore at life.</p>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="view overlay rounded z-depth-1">
+                                <img src="https://images.pexels.com/photos/1652415/pexels-photo-1652415.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="" class="img-fluid">
+
+                            </div>
+                        </div>
+
+                        <div class="col-md-9">
+                            <p class="dark-grey-text">
+                                08/12/18
+                            </p>
+                            <a href="" class="black-text">
+                                <strong>Some cool ass pictures.</strong>
+                                <i class="fa fa-angle-right float-right"></i>
+                            </a>
+
+                        </div>
+                    </div>
+                    <hr>
+                </div>
             </div>
           </section>
       </div>
@@ -91,99 +139,6 @@
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
   <!-- MDB core JavaScript -->
   <script type="text/javascript" src="js/mdb.min.js"></script>
-  <script>
-      var defaultLang = "en";
-      var language = defaultLang;
-
-      setLang(language);
-
-      function setLang(newLang){
-          language = newLang;
-          document.getElementById("Title").innerHTML = localize("title", language);
-          document.getElementById("Home").innerHTML = localize("home", language);
-          document.getElementById("Contacts").innerHTML = localize("contacts", language);
-          document.getElementById("Info").innerHTML = localize("info", language);
-          document.getElementById("Info2").innerHTML = localize("info2", language);
-          document.getElementById("Info3").innerHTML = localize("info3", language);
-          document.getElementById("Info4").innerHTML = localize("info4", language);
-          document.getElementById("English").innerHTML = localize("english", language);
-          document.getElementById("Ukrainian").innerHTML = localize("ukrainian", language);
-          document.getElementById("Russian").innerHTML = localize("russian", language);
-      }
-
-      function localize(txt, language){
-          var lclzdText;
-          switch(language){
-              case "en" :
-                if(txt == "title")
-                    lclzdText = "aSuhorada Blog";
-                if(txt == "home")
-                    lclzdText = "Home";
-                if(txt == "contacts")
-                    lclzdText = "Contacts"
-                if(txt == "info")
-                    lclzdText = "This blog is about every creation, that I do."
-                if(txt == "info2")
-                    lclzdText = "Time you enjoy wasting is not wasted time."
-                if(txt == "info3")
-                    lclzdText = "Read it now"
-                if(txt == "info4")
-                    lclzdText = "Globalization"
-                if(txt == "english")
-                    lclzdText = "English"
-                if(txt == "ukrainian")
-                    lclzdText = "Ukrainian"
-                if(txt == "russian")
-                    lclzdText = "Russian"
-                break;
-              case "ua" :
-                if(txt == "title")
-                    lclzdText = "aSuhorada Блог";
-                if(txt == "home")
-                    lclzdText = "Додому";
-                if(txt == "contacts")
-                    lclzdText = "Контакти"
-                if(txt == "info")
-                    lclzdText = "Цей блог про все, що я створюю."
-                if(txt == "info2")
-                    lclzdText = "Час який ти витрачаеш в насолоду, не витрачений час."
-                if(txt == "info3")
-                    lclzdText = "Прочитати зараз"
-                if(txt == "info4")
-                    lclzdText = "Глобалізація"
-                if(txt == "english")
-                    lclzdText = "Англійська"
-                if(txt == "ukrainian")
-                    lclzdText = "Українська"
-                if(txt == "russian")
-                    lclzdText = "Російська"
-                break;
-              case "ru" :
-                if(txt == "title")
-                    lclzdText = "aSuhorada Блог";
-                if(txt == "home")
-                    lclzdText = "Домой";
-                if(txt == "contacts")
-                    lclzdText = "Контакты"
-                if(txt == "info")
-                    lclzdText = "Этот блог про все, что я создаю."
-                if(txt == "info2")
-                    lclzdText = "Время которое ты тратишь в наслаждение, не потраченное время."
-                if(txt == "info3")
-                    lclzdText = "Читать сейчас"
-                if(txt == "info4")
-                    lclzdText = "Глобализация"
-                if(txt == "english")
-                    lclzdText = "Английский"
-                if(txt == "ukrainian")
-                    lclzdText = "Украинский"
-                if(txt == "russian")
-                    lclzdText = "Русский"
-                break;    
-          }
-          return lclzdText;
-      }
-  </script>
 </body>
 
 </html>
